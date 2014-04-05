@@ -1,8 +1,18 @@
 body {
 	background-color: #fff;
 }
-.panel-default {
-	
+.navbar-default {
+	background: #009ee1; /* Old browsers */
+	background: -moz-linear-gradient(left,  #009ee1 0%, #004fa3 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,#009ee1), color-stop(100%,#004fa3)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left,  #009ee1 0%,#004fa3 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left,  #009ee1 0%,#004fa3 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left,  #009ee1 0%,#004fa3 100%); /* IE10+ */
+	background: linear-gradient(to right,  #009ee1 0%,#004fa3 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009ee1', endColorstr='#004fa3',GradientType=1 ); /* IE6-9 */
+}
+.navbar-default .navbar-nav>li>a {
+	color: #fff;
 }
 .panel-heading {
 	position: relative;
