@@ -1,0 +1,34 @@
+body {
+	background-color: #fff;
+}
+.panel-default {
+	
+}
+.panel-heading {
+	position: relative;
+	background-color: #c7eafb !important;
+}
+.panel-icon {
+	width: 66px;
+	height: 62px;
+	background: url(img/assets.png) no-repeat;
+	position: absolute;
+	right: 0;
+	top: -12px;
+}
+.panel-icon.download {
+	background-position: 0 0;
+}
+.panel-icon.travel {
+	background-position: -68px 0;
+}
+.panel-icon.calendar {
+	background-position: -138px 0 ;
+}
+.panel-icon.video {
+	background-position: -207px 0;
+}
+.panel-icon.gallery {
+	background-position: -276px 0;
+}
+
