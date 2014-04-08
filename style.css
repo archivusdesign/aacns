@@ -1,4 +1,8 @@
 /*custom styles*/
+.container {
+	width: 1120px;
+	max-width: none !important;
+}
 .featured-bg {
 	background: url(img/featured-bg.jpg) 0 0;
 	border-left: 10px solid #FFF;
@@ -11,6 +15,9 @@
 }
 .intro {color: #fff; margin-bottom: 20px;}
 .intro h1 {margin: 0px;}
+
+
+/*top-links*/
 .top-links {
 	margin: 0;
 	position: absolute;
@@ -23,14 +30,39 @@
 .top-links .nav>li>a:hover,
 .top-links .nav>li>a:focus {
 	background: none;
-	padding: 6px 9px !important;
+	padding: 6px 12px !important;
+}
+.top-links .navbar-nav>li>a {
+	color: #636466;
+}
+.top-links .nav>li>a:hover,
+.top-links .nav>li>a:focus {
+	color: #428BCA
+}
+.top-links .navbar-nav>li>a:after {
+	width: 5px;
+	height: 5px;
+	display: block;
+	background: #636466;
+	border-radius: 100%;
+	position: absolute;
+	content: "";
+	right: -3px;
+	top: 13px;
+}
+.top-links .navbar-nav>li:last-child>a:after {
+	display: none;
 }
 
+
+/*sponsors*/
 .sponsors .navbar-nav>li>a {
 	padding-top: 9px;
 	padding-bottom: 9px;
 }
 
+
+/*bottom sponsors*/
 .bottom-sponsors .kenesasia p {
 	color: #ccc;
 	margin: 0;
@@ -39,7 +71,30 @@
 .bottom-sponsors .hosted-by {
 	font-size: 10px;
 	color: #808080;
+	float: left;
+	width: 20%;
 }
+.bottom-sponsors .bsponsors {
+	float: right;
+	width: 80%;
+}
+.bottom-sponsors .col-xs-4:first-child {
+	color: #5c4575;
+	font-weight: bold;
+}
+.bottom-sponsors .bsponsors img {
+	margin-right: 6px;
+}
+.sb-aancs {
+	width: 80px;
+	float: left;
+	text-align: center;
+}
+.sb-kallang {
+	font-size: 10px;
+	color: #696969;
+}
+
 /*sidebar widgets*/
 .side-widget {
 	padding-top: 138px;
@@ -201,28 +256,25 @@ body {
 }
 
 /*media queries*/
-@media (min-width: 1200px) {
-	.container {
-		width: 1120px !important;
-	}
+.main-nav .navbar-brand {
+	margin-left: 15px !important;
+	background: #21408D url(img/featured-bg.jpg) -43px -90px;
+	min-width: 160px;
+	position: relative;
+	padding-left: 11px;
 }
-@media (min-width: 768px) {
-	.main-nav .navbar-brand {
-		margin-left: 15px !important;
-		background: #21408D url(img/featured-bg.jpg) -43px -90px;
-		min-width: 160px;
-		position: relative;
-		padding-left: 11px;
-	}
-	.intro {
-		padding-left: 50px;
-	}
-	.navbar-nav {
-		float: left;
-		margin: 0;
-		}
+.intro {
+	padding-left: 50px;
 }
-
+.navbar-nav {
+	float: left;
+	margin: 0;
+}
+.btn-yellow {
+	color: #4B4B4B;
+	background-color: #F1EC3E;
+	border-color: #DAD775;
+}
 .page-content {
 	margin-top: 20px;
 	margin-bottom: 20px;
