@@ -1,3 +1,8 @@
+<?php
+/*
+* Template Name: Home
+*/
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
