@@ -248,7 +248,7 @@ body {
 }
 .main-nav .navbar-nav>li>a:hover,
 .main-nav .navbar-nav>li>a:focus {
-	color: #ccc;
+	color: #EDF0F3;
 }
 .main-nav .navbar-nav a.dropdown-toggle {white-space: nowrap;}
 .panel-heading {
