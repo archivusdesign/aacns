@@ -246,6 +246,10 @@ body {
 	vertical-align: middle;
 	text-align: center;
 }
+.main-nav .navbar-nav>li>a:hover,
+.main-nav .navbar-nav>li>a:focus {
+	color: #ccc;
+}
 .main-nav .navbar-nav a.dropdown-toggle {white-space: nowrap;}
 .panel-heading {
 	position: relative;
