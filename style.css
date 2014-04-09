@@ -237,7 +237,7 @@ body {
 .main-nav .navbar-nav>li>a {
 	border-right: 1px solid #4C9CE5;
 	color: #FFF;
-	max-width: 90px;
+	max-width: 95px;
 	font-size: 11px;
 	line-height: 13px;
 	padding: 12px 10px;
@@ -246,6 +246,7 @@ body {
 	vertical-align: middle;
 	text-align: center;
 }
+.main-nav .navbar-nav a.dropdown-toggle {white-space: nowrap;}
 .panel-heading {
 	position: relative;
 	background-color: #c7eafb !important;
