@@ -2,6 +2,9 @@
 /*
 * Template Name: Home
 */
+
+$main_menus = get_field('menus', 2);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -50,49 +53,24 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li><a href="page.html">Congress Information</a></li>
-                    <li class="dropdown">
-                      <a href="index.html" class="dropdown-toggle" data-toggle="dropdown">About Venue <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index.html">Action</a></li>
-                        <li><a href="page.html">Another action</a></li>
-                        <li><a href="index.html">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="index.html">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="page.html">One more separated link</a></li>
-                      </ul>
+
+                <?php foreach($main_menus as $menu): ?>
+                    <li <?=count($menu['sub_menu']) ? 'class="dropdown"' : ''?> >
+
+                        <a href="<?=$menu['main_menu']->guid?>"  <?=count($menu['sub_menu']) ? 'class="dropdown-toggle" data-toggle="dropdown"' : ''?> ><?=$menu['main_menu']->post_title?> <?=count($menu['sub_menu']) ? '<b class="caret"></b>' : ''?> </a>
+
+                        <?php if(count($menu['sub_menu'])): ?>
+
+                            <ul class="dropdown-menu">
+                            <?php foreach($menu['sub_menu'] as $sub_menu): ?>
+                                <li><a href="<?=$sub_menu['sub_link']->guid?>"><?=$sub_menu['sub_link']->post_title?></a></li>
+                            <?php endforeach; ?>
+                          </ul>
+
+                        <?php endif; ?>
                     </li>
-                    <li><a href="page.html">Scientific Information</a></li>
-                    <li><a href="index.html">Abstract Subscription</a></li>
-                    <li><a href="page.html">Regisgration</a></li>
-                    <li><a href="index.html">Sponsorship & Exhibition</a></li>
-                    <li><a href="index.html">Travel and Accomodation</a></li>
-                    <li><a href="page.html">Social Program</a></li>
-                    <li class="dropdown">
-                      <a href="page.html" class="dropdown-toggle" data-toggle="dropdown">Media <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index.html">Action</a></li>
-                        <li><a href="page.html">Another action</a></li>
-                        <li><a href="index.html">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="index.html">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="page.html">One more separated link</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown">
-                      <a href="page.html" class="dropdown-toggle" data-toggle="dropdown">Contact Us <b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li><a href="index.html">Action</a></li>
-                        <li><a href="page.html">Another action</a></li>
-                        <li><a href="index.html">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="page.html">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="page.html">One more separated link</a></li>
-                      </ul>
-                    </li>
+                <?php endforeach; ?>
+                    
                 </ul>
             </div><!-- .navbar-collapse -->
         </div><!-- .container -->
